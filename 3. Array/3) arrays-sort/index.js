@@ -1,6 +1,10 @@
 function arraysSort(arr) {
-  // Напиши свой код здесь
-};
+  const newArr = [...arr];
+  newArr.sort((a, b) => {
+    return Math.max(...a) - Math.max(...b);
+  });
+  return newArr;
+}
 
 window.arraysSort = arraysSort;
 

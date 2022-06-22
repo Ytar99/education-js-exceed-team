@@ -13,7 +13,9 @@
  */
 
 function isValidEmail(email) {
-  // Напиши свой код здесь
+  const regexp = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b/);
+  // const regexp = new RegExp(/\S+@gmail.com$/);
+  return regexp.test(email);
 }
 
 window.isValidEmail = isValidEmail;

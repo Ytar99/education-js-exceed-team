@@ -1,39 +1,46 @@
 <html lang="html">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Others/token-service</title>
-    <link rel="stylesheet" type="text/css" href="../../index.css">
-</head>
-<body>
-<div class="task-container">
-    <h1>Others/token-service</h1>
-    <h2>Задача:</h2>
-    <p>
-        Задача
+    <link rel="stylesheet" type="text/css" href="../../index.css" />
+  </head>
+  <body>
+    <div
+      class="task-container"
+      style="width: 768px; font-size: 16pt; margin: 0 auto"
+    >
+      <h1>Others/token-service</h1>
+      <h2>Задача:</h2>
+      <code>
         Написать TokenService, в котором есть слудеющие функции
-        subscribe(callback) - добавляет подписку на изменение токена (параметром будет новый токен, или null, если токен удален)
-        setToken(token) - устанавливает значения токена (вызывает подписчиков)
-        removeToken() - удаляет токен (вызвает подписчиков на изменеия)
+        <br />
+        subscribe(callback) - добавляет подписку на изменение токена
+        (параметром будет новый токен, или null, если токен удален)
+        <br />
+        setToken(token) - устанавливает значения токена (вызывает
+        подписчиков)
+        <br />
+        removeToken() - удаляет токен (вызвает подписчиков на
+        изменеия)
+        <br />
         getToken() - возващяет токен
-    </p>
-    <h2>
-        Примеры
-    </h2>
-    <p>
+      </code>
+      <h2>Примеры</h2>
+      <code>
         const testService = new TokenService();
-        <br>
-        testService.subscribe((data) => {
-            const message = data ? 'subscriber: ' + data : 'token was removed';
-            console.log(message);
-        });
-        <br>
-        testService.setToken('newToken'); // log: "subscriber: newToken"
-        <br>
+        <br />
+        testService.subscribe((data) => { const message = data ?
+        'subscriber: ' + data : 'token was removed';
+        console.log(message); });
+        <br />
+        testService.setToken('newToken'); // log: "subscriber:
+        newToken"
+        <br />
         testService.getToken(); // "newToken"
-        <br>
-        testService.removeToken();  // log: "token was removed" null
-    </p>
-</div>
-<script type="module" src="./index.js"></script>
-</body>
+        <br />
+        testService.removeToken(); // log: "token was removed" null
+      </code>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
